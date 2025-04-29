@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-# Assume USB is mounted at /mnt/e
+# Assuming USB is mounted at /mnt/e
 MOUNT_DIR="/mnt/e"
 TARGET_DIR="logs_$(date +%Y%m%d_%H%M%S)"
 LOG_DIRS=("/var/log" "/etc" "/home/*/.config")

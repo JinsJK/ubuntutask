@@ -3,7 +3,7 @@
 
 LOG_FILE="/var/log/node-monitor.log"
 
-# Header (only once)
+# Header
 if [ ! -f "$LOG_FILE" ]; then
   echo "timestamp,pid,cpu_percent,mem_percent,rss_kb,status" >> "$LOG_FILE"
 fi

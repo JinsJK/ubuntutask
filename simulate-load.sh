@@ -14,7 +14,7 @@ echo "Starting stress with:"
 echo "  CPU: $CPU_LOAD of $TOTAL_CPUS cores"
 echo "  RAM: ~$RAM_TO_USE_MB MB using $VM_WORKERS workers"
 
-# Start stress normally (blocking)
+# Start stress normally
 stress --cpu "$CPU_LOAD" --vm "$VM_WORKERS" --vm-bytes 256M --io 4
 
 # After stress ends, exit cleanly without restarting

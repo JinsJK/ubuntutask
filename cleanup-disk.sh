@@ -19,9 +19,9 @@ done
 echo "[Cleanup-Disk] Deleting temp files in /var/tmp/fake-temp/..."
 rm -f /var/tmp/fake-temp/tmpfile_*
 
-# Optional: clean apt cache
+#clean apt cache
 echo "[Cleanup-Disk] Cleaning APT cache..."
 apt-get clean
 
-# Optional: show free space after cleanup
+#show free space after cleanup
 df -h /var
