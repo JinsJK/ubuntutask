@@ -1,0 +1,18 @@
+version: '3.9'
+
+services:
+  ubuntu-troublesim:
+    build: .
+    container_name: ubuntu-troublesim
+    privileged: true  # Needed to simulate mounting and stress testing
+    tmpfs:
+      - /var:size=100m
+    mem_limit: 256m
+    volumes:
+      - /mnt/e:/mnt/usb        # simulated USB
+      - ./logs:/var/log            # Persist logs separately
+    ports:
+      - "3000:3000"          # Expose the Node.js app
+      - "2222:22"      # SSH port exposed
+    restart: "no"
+    tty: true
